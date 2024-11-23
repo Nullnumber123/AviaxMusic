@@ -7,22 +7,22 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("25251663"))
-API_HASH = getenv("8e7e485d18470e56d6d918a8d928da61")
+API_ID = int(getenv("API_ID"))
+API_HASH = getenv("API_HASH")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("7923114293:AAH1ZsI_tXAA6QMT-zzFi50ZjZhP9Nh2KG8")
+BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("mongodb+srv://BrandedSupportGroup:BRANDED_WORLD@cluster0.v4odcq9.mongodb.net/?retryWrites=true&w=majority", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
 
 # Chat id of a group for logging bot's activities
-LOG_GROUP_ID = int(getenv("-1002466096002", None))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", None))
 
 # Get this value from @MissRose_Bot on Telegram by /id
-OWNER_ID = int(getenv("5844528505", None))
+OWNER_ID = int(getenv("OWNER_ID", None))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -65,7 +65,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 2145386496))
 
 
 # Get your pyrogram v2 session from Replit
-STRING1 = getenv("BQDNvmIAkUTwvv0wDGWR92pOIRApcwsVSDBCFZ1LtyrOBrtpFESI3yeHLbzds4nfoYqYJyr7_I4YpTg1eNZKhkZh5Ibq3WsR-PaViknJgOHX-CumCokjU7AGnTBcYHFP9twTkhK5ekg5LitiopD3bpckKdq2nMfQj6P1HdAViKGyxVY9yxu-GEBEUzcJ2fdtnNTZNui7iSkWzblmk_fHMtSfKvcWYKXnsctqNPJLJhpUV2ewV_2LGsNWk7sUXJM6Z9hk36ua2ZtsPN13n4s9RencZYgEYas65Tmm71b5A7PAbj4uoDZuSRSsNKz-btuFORbhSrbEPA46YzPSnu5GfgRDfh0IBgAAAAGpmS3bAA", None)
+STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
@@ -116,4 +116,4 @@ if SUPPORT_GROUP:
     if not re.match("(?:http|https)://", SUPPORT_GROUP):
         raise SystemExit(
             "[ERROR] - Your SUPPORT_GROUP url is wrong. Please ensure that it starts with https://"
-        )
+)
